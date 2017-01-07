@@ -204,7 +204,7 @@ Multiple Files
 Every non-trivial system is composed of multiple components.
 
 C uses two types of files: header (`.h`) and source (`.c`). Header files
-contains declarations of functions and types. Source files implement
+contain declarations of functions and types. Source files implement
 functions. Header files are "included" and source files are "linked".
 To link source files, simply put the list of source files after `gcc`.
 
@@ -409,7 +409,7 @@ understanding the entire assignment's requirements.
 
 Every software developer needs to know debugging process.  The best
 strategy, however, is to prevent bugs through careful design. Then, it
-is important detect bugs automatically.  In PA01, a function checks
+is important to detect bugs automatically.  In PA01, a function checks
 whether an array has been correctly sorted.  Such checking code should
 be inserted into strategic locations while developing a large
 program. The checking code can detect problems as soon as they arise.
@@ -427,7 +427,7 @@ Instructions
 
 You need to thoroughly understand every detail in this assignment.
 This assignment introduces many tools. You need to understand these
-tools because they are helpful writing better programs.
+tools because they are helpful in writing better programs.
 
 * Set up your Github account
 
@@ -493,7 +493,7 @@ tools because they are helpful writing better programs.
   `git add <filename>` tells git to "stage" a file for
   committing. Staging files is useful if you want to make changes to
   several files at once and treat them as one logical change to your
-  code.  You need to add a file to git only once.
+  code.  You need to call git add every time you want to commit a file that you have changed.
 
   `git commit` tells git to commit a new version of your code including
   all the changes you staged with `git add`. Note that until you execute
