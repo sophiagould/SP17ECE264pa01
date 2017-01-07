@@ -680,4 +680,4 @@ police).  You are responsible providing proper documents requesting
 the extensions.
 
 The teaching staff will not respond to email marked "URGENT".  For all
-emergencies, please call 911.
+emergencies, please call 911. 
