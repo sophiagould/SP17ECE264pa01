@@ -1,0 +1,41 @@
+[*] Cleaning up...
+/bin/rm -f input*
+/bin/rm -f *.o
+/bin/rm -f testgen 
+/bin/rm -f *.gcda *.gcno gmon.out *gcov
+/bin/rm -f pa01 pa01.prof
+[*] Compiling program...
+make pa01
+gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror -fprofile-arcs -ftest-coverage -pg testgen.c -o testgen
+./testgen
+gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror -fprofile-arcs -ftest-coverage -pg -DSELECTION_SORT -c pa01main.c
+gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror -fprofile-arcs -ftest-coverage -pg -DSELECTION_SORT -c selectsort.c
+gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror -fprofile-arcs -ftest-coverage -pg -c swap.c
+gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror -fprofile-arcs -ftest-coverage -pg -c printarray.c
+gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror -fprofile-arcs -ftest-coverage -pg pa01main.o selectsort.o swap.o printarray.o -o pa01
+./pa01 input0
+[*] Passed
+./pa01 input1
+[*] Passed
+./pa01 input5
+[*] Passed
+./pa01 input13
+[*] Passed
+./pa01 input41
+[*] Passed
+./pa01 input97
+[*] Passed
+./pa01 input1021
+[*] Passed
+./pa01 input16383
+[*] Passed
+./pa01 input65533
+[*] Passed
+[*] Testing code coverage...
+gcov selectsort.c
+File 'selectsort.c'
+Lines executed:100.00% of 10
+selectsort.c:creating 'selectsort.c.gcov'
+
+grep '#####' selectsort.c.gcov | wc -l
+[*] There were 0 untested line(s) in the selectsort method.
